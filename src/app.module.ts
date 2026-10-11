@@ -6,6 +6,7 @@ import { UserModule } from './modules/user/user.module.js';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './modules/auth/auth.module.js';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { UploadModule } from './modules/upload/upload.module.js';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ThrottlerModule } from '@nestjs/throttler';
         limit: 10,
       },
     ]),
+     UploadModule,
   ],
   controllers: [AppController],
   providers: [AppService],
